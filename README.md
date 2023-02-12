@@ -1,2 +1,2 @@
-# Curriculom
+# Curriculum
 Proyecto Curriculum

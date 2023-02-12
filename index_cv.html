@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Gonzalez N.E.</title>
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/index_cv.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/circle-user-solid.svg" type="image/x-icon">
+    <!--Fonts awesome-->
+    <script src="https://kit.fontawesome.com/8aa89f7912.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!--Menú responsive-->
+    <header class="header">
+        <div class="logo">
+            <img src="images/foto_perfil.jpeg" alt="foro de perfil" id="btn_home">
+            <span class="tooltiptext">Inicio</span>
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="#" id="btn_info">Información</a></li>
+                <li><a href="#" id="btn_formacion">Formación</a></li>
+                <li><a href="#" id="btn_experiencia">Experiencia</a></li>
+           </ul>            
+        </nav>
+        <a class="btn" href="#"><button id="btn_contact">Contacto</button></a>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
+
+        <div id="mobile-menu" class="overlay">
+           <a onclick="closeNav()" href="#" class="close">&times;</a>
+            <div class="overlay-content">
+               <a href="#" id="btn_info2">Información</a>
+               <a href="#" id="btn_formacion2">Formación</a>
+               <a href="#" id="btn_experiencia2">Experiencia</a>
+                <a href="#" id="btn_contact2">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <section id="home">
+                <img src="images/foto_perfil.jpeg" alt="">
+                <h1>Bienvenidos, gracias por su visita</h1>
+            </section>
+            <section id="informacion">
+                <h3>Datos personales:</h3>
+                <ul>
+                    <li><span>Nombre:</span> Nestor Emmanuel Gonzalez</li>
+                    <li><span>Fecha de nacimiento:</span>02/10/1990</li>
+                    <li><span>Teléfono:</span>011-5325-0388</li>
+                    <li><span>E-mail:</span>
+                      <a href="mailto:gonzalez.nestoremmanuel@gmail.com">gonzalez.nestoremmanuel@gmail.com</a>
+                    </li>
+                    <li><span>Dirección:</span>Calle 848 N° 2352, San Fco Solano</li>
+                    <!--Mapa-->
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.9675671905848!2d-58.31054758537985!3d-34.78159177443707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32c6c186e4701%3A0xf4db5fbeb805af4a!2sC.%20848%202352%2C%20B1881%20San%20Francisco%20Solano%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1676154204310!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                </ul>
+            </section>
+            <section id="formacion">
+                <h3>Formación académica</h3>
+                <ul>
+                  <li><span>Universidad Nacional de La Plata</span></li>
+                  <li>Lic en Cs Físicas 2023 <span class="cursando">Cursando</span></li>
+                  <li><span>Ticmas</span></li>
+                  <li>Primeros pasos del desarrollo frontend <span class="cursando">Cursando</span></li>
+                  <li><span>E.E.T. N°7 "Jose Hernandez" de Avellaneda</span></li>
+                  <li>Técnico en informatica <span class="completo">Completo</span></li>
+                  <li><span>E.E.T. N°7 "Jose Hernandez" de Avellaneda</span></li>
+                  <li>Bachiller en bienes y servicios <span class="completo">Completo</span> </li>
+                </ul>
+            </section>
+            <section id="experiencia">
+                <h3>Experiencia laboral</h3>
+                <ul>
+                  <li><span>Claro-La Postal</span> 2016-2022</li>
+                  <li>Encargado del depósito de servicios generales.</li>
+                  <li><span>Grupo Canale</span> 2013-2016</li>
+                  <li>Responsable del soporte IT de la planta de hojalateria y distribución.</li>
+                  <li><span>Unisys</span> 2011-2013</li>  
+                  <li>Soporte IT de diversos clientes.</li>
+                  <li><span>Ceitech</span> 2010-2011</li>
+                  <li>Soporte IT.</li>
+                </ul>
+            </section>
+            <section id="contacto">
+              <div class="container">
+                <form action="#" method="post">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="" id="name" placeholder="Ingrese su nombre" required>
+                  <label for="email">E-mail</label>
+                  <input type="email" name="" id="email" placeholder="ingrese su correo electronico" required>
+                  <label for="asunto">Asunto</label>
+                  <input type="text" name="" id="asunto" placeholder="" required>
+                  <label for="texto">Mensaje</label>
+                  <textarea name="" id="texto" cols="30" rows="10"></textarea>
+                  <div class="formbtn">
+                    <input type="reset" value="Borrar">
+                    <input type="submit" value="Enviar">
+                  </div>    
+                </form>
+              </div>
+    
+            </section>
+        </article>
+      </main>
+        <!--Pie de página-->
+    <footer>
+        <i class="fa-sharp fa-solid fa-copyright"></i>
+        <p>2023 Nestor Emmanuel Gonzalez</p>
+        <a href="https://www.linkedin.com/in/nestor-emmanuel-gonzalez-b1881722b/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/el_guey_emma/" target="_blank" >
+            <i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/Fid00" target="_blank" >
+            <i class="fa-brands fa-facebook"></i></a>
+    </footer>
+    <script src="js/index_cv.js"></script>
+</body>
+</html>

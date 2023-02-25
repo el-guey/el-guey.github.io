@@ -11,13 +11,17 @@
     <link rel="shortcut icon" href="images/circle-user-solid.svg" type="image/x-icon">
     <!--Fonts awesome-->
     <script src="https://kit.fontawesome.com/8aa89f7912.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/8aa89f7912.css" crossorigin="anonymous">
+    <!--Google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body>
     <!--Menú responsive-->
     <header class="header">
         <div class="logo">
-            <img src="images/foto_perfil.jpeg" alt="foro de perfil" id="btn_home">
+            <img src="images/home_FILL0_wght400_GRAD0_opsz48.svg" alt="foro de perfil" id="btn_home">
+            <!--Leyenda debajo del boton de inicio-->
             <span class="tooltiptext">Inicio</span>
         </div>
         <nav>
@@ -29,10 +33,10 @@
         </nav>
         <a class="btn" href="#"><button id="btn_contact">Contacto</button></a>
 
-        <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
+        <a id="abrirMenu" class="menu" href="#"><button>Menú</button></a>
 
         <div id="mobile-menu" class="overlay">
-           <a onclick="closeNav()" href="#" class="close">&times;</a>
+           <a id="cerrarMenu" href="#" class="close">&times;</a>
             <div class="overlay-content">
                <a href="#" id="btn_info2">Información</a>
                <a href="#" id="btn_formacion2">Formación</a>
@@ -44,10 +48,11 @@
     <main>
         <article>
             <section id="home">
-                <img src="images/foto_perfil.jpeg" alt="">
-                <h1>Bienvenidos, gracias por su visita</h1>
+                <img src="images/foto_perfil.jpeg" alt="" class="image">
+                <h1>Bienvenidos</h1>
+                <h2>Mi nombre es Nestor Emmanuel Gonzalez, les comparto mi curriculum</h2>
             </section>
-            <section id="informacion">
+            <section id="informacion" class="hidden">
                 <h3>Datos personales:</h3>
                 <ul>
                     <li><span>Nombre:</span> Nestor Emmanuel Gonzalez</li>
@@ -61,7 +66,7 @@
                     <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.9675671905848!2d-58.31054758537985!3d-34.78159177443707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32c6c186e4701%3A0xf4db5fbeb805af4a!2sC.%20848%202352%2C%20B1881%20San%20Francisco%20Solano%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1676154204310!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
                 </ul>
             </section>
-            <section id="formacion">
+            <section id="formacion" class="hidden">
                 <h3>Formación académica</h3>
                 <ul>
                   <li><span>Universidad Nacional de La Plata</span></li>
@@ -74,7 +79,7 @@
                   <li>Bachiller en bienes y servicios <span class="completo">Completo</span> </li>
                 </ul>
             </section>
-            <section id="experiencia">
+            <section id="experiencia" class="hidden">
                 <h3>Experiencia laboral</h3>
                 <ul>
                   <li><span>Claro-La Postal</span> 2016-2022</li>
@@ -87,7 +92,7 @@
                   <li>Soporte IT.</li>
                 </ul>
             </section>
-            <section id="contacto">
+            <section id="contacto" class="hidden">
               <div class="container">
                 <form action="#" method="post">
                   <label for="name">Nombre</label>
@@ -104,7 +109,6 @@
                   </div>    
                 </form>
               </div>
-    
             </section>
         </article>
       </main>

@@ -1,5 +1,6 @@
 /*Fuentes de Google*/
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;500;700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,8 +8,12 @@
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
 }
+html{
+    height: 100%;
+}
 
 body{
+    min-height: 100%;
     background-color: rgba(0,0,0,0.8);
     color: #fff;
 }
@@ -28,54 +33,40 @@ body{
     position: relative;
 }
 /*Leyenda de inicio sobre la foto de perfil*/
-.header .logo .tooltiptext{
+.tooltiptext {
+    font-size: 10px;
     visibility: hidden;
-    width: 120px;
-    background-color: #000;
+    width: 50px;
     color: #fff;
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
+    border-radius: 6px;
     position: absolute;
     z-index: 1;
-    top: 50%;
-    left: 110%;
-    /*top: 120%;
-    left: 50%;
-    margin-left: -60px;   */
+    top:100%;
+    left:50%;
+    margin-left:-50%;
 }
-.header .logo .tooltiptext::after{
-    content: "";
-    position: absolute;
-    top:50%;
-    right: 100%;
-    margin-top: -5px;
-    /*
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;*/
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent ;
-  }
-  
-  .header .logo:hover .tooltiptext {
-    visibility: visible;
-  }
 
+/* Mostrar la leyenda de inicio al posarse sobre el boton de home */
+.logo:hover .tooltiptext {
+  visibility: visible;
+}
 
 .header .logo img{
-    height: 70px;
+    height: 50px;
     width: auto;
     transition: all 0.3s;
     border-radius: 50%;
+    filter:invert(1);
 }
 
 .header .logo img:hover{
     transform: scale(1.2);
-    border-style: solid;
+    filter: opacity(1);
+    /*border-style: solid;
     border-width: 1px;
-    border-color: #e2f1f8;
+    border-color: #e2f1f8;*/
 }
 
 .header .nav-links{
@@ -101,12 +92,12 @@ body{
     color: #ffbc0e;
 }
 
-/**/.menu {
+.menu {
     display:none;
 }
 
 .header .btn button,
-/**/.header .menu button{
+.header .menu button{
     margin-left: 20px;
     font-weight: 700;
     color: #1b3039;
@@ -119,14 +110,14 @@ body{
 }
 
 .header .btn button:hover,
-/**/.header .menu button:hover{
+.header .menu button:hover{
     background-color: #e2f1f8;
     color: #ffbc0e;
     transform: scale(1.1);
 }
 
 
-/**/@media screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     .nav-links, .btn {
         display: none;
     }
@@ -197,7 +188,8 @@ body{
 }
 /*Estilos del cuerpo de la página*/
 main{
-    width: 90%;
+    /*width: 90%;*/
+    /*height: 400px;*/
 }
 h1{
     font-size: 28px;
@@ -210,9 +202,18 @@ h3{
 article{
     font-size: 16px;
     text-align: center;
+    
+}
+.image{
+    width: 150px;
+    padding: 5px;
+    border-radius: 25%;
 }
 section{
+    margin: 20px 20px;
     text-align: center;
+    padding: 20px;
+    
 }
 section ul{
     display: inline-block;
@@ -230,40 +231,69 @@ a[href^="mailto:"]:hover{
 
 li{
     list-style: none;
-    /*
-    animation-name: texto;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;*/
+    text-align: center;
+    padding: 5px;
 }
 span{
     font-weight: bolder;
+    font-size: 22px;
     color: #85bedc;
 }
 /*Animación cambia el color del texto*/
-@keyframes texto{
-    from{
-        color: green;
+@keyframes txtcompleto{
+    0%{
+        background-color: rgba(0,0,0,0.8);
+        color: #3FE11B;
     }
-    to{
-        color: #000;
+    50%{
+        background-color: #3FE11B ;
+        color: rgba(0,0,0,0.8);
     }
-    
+    100%{
+        background-color: rgba(0,0,0,0.8);
+        color: #3FE11B;
+    }
 }
 
+@keyframes txtcursando{
+    0%{
+        background-color: rgba(0,0,0,0.8);
+        color:  #de2121;
+    }
+    50%{
+        background-color:  #de2121 ;
+        color: rgba(0,0,0,0.8);
+    }
+    100%{
+        background-color: rgba(0,0,0,0.8);
+        color:  #de2121;
+    }
+}
 
 .cursando{
-    color: red;
+    color: #de2121;
     font-size: 14px;
+    animation-name: txtcursando;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode:both;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
 .completo{
-    color: green;
+    color: rgb(25, 122, 25);
     font-size: 14px;
+    animation-name: txtcompleto;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode:both;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
+
 .container{
     margin: auto;
-    text-align: left;
+    text-align: center;
     width: 50%;
 }
 input[type=text],input[type=email],textarea{
@@ -309,16 +339,16 @@ label{
 }
 /*Estilos del pie de página*/
 footer{
-    height: 50px;
-    background-color: #189b39;
+    height: 30vh;
     color: #fff;
     display: flex;
     justify-content:center;
     align-items: center;
+    bottom: 0px;
 }
 footer p{
     font-size: 12px;
-    margin: 0px 5px;
+    margin: 5px 5px;
 
 }
 footer a{
@@ -333,5 +363,5 @@ footer a{
  .fa-facebook:hover,
  .fa-instagram:hover{
     transform: scale(2);
-    filter: invert(1);
+    color: #ffbc0e;
 }
